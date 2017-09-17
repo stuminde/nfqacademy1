@@ -1,0 +1,208 @@
+--
+-- Duombazë: `kestundys`
+--
+
+
+
+--
+-- Sukurta duomenø struktûra lentelei `Knygos`
+--
+
+CREATE TABLE IF NOT EXISTS `Knygos` (
+  `id` int(11) NOT NULL auto_increment,
+  `Pavadinimas` text collate utf8_lithuanian_ci NOT NULL,
+  `Autorius` text collate utf8_lithuanian_ci NOT NULL,
+  `Metai` text collate utf8_lithuanian_ci NOT NULL,
+  `member_id` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci AUTO_INCREMENT=149 ;
+
+--
+-- Sukurta duomenø kopija lentelei `Knygos`
+--
+
+INSERT INTO `Knygos` (`id`, `Pavadinimas`, `Autorius`, `Metai`, `member_id`) VALUES
+(1, 'Leningradas', 'Anna Reid', '2011', 1),
+(8, 'Brida', 'Paulo Coelho', '2008', 1),
+(10, 'Balta drobulë', 'Antanas Ðkëma', '1958', 1),
+(11, 'Valentina', 'Antanas Vaièiulaitis', '1936', 1),
+(12, 'Metai', 'Kristijonas Donelaitis', '1914', 1),
+(14, 'Dienmedþiu þydësiu', 'Salomëja Nëris', '1938', 1),
+(15, 'Sename dvare', 'Ðatrijos Ragana', '1951', 1),
+(16, 'Pavasario balsai', 'Maironis ', '1895', 1),
+(17, 'Skirgaila', 'Vincas Krëvë', '1922', 1),
+(18, 'Altoriø ðeðely', 'Vincas Mykolaitis-Putinas', '1933', 1),
+(20, 'Þemaièiø þemës rûpintojëliai', 'Bernardas Aleknavièius', '2008', 1),
+(21, 'Toli ið arti', 'Rièardas Anusauskas, Jurga Anusauskienë', '2010', 1),
+(22, 'Gyvûnai (fotoalbumas)', 'Steve Bloom', '2004', 1),
+(23, 'Egiptas - neatskleistø paslapèiø ðalis', 'Marcello Bertinett', '2005', 1),
+(24, 'Ðuniðkos iðdaigos', 'Alexandra Ortolja-Baird', '2007', 1),
+(25, 'Pasaulio stebuklai', 'C. Lemoine, F. Bar', '2008', 1),
+(26, 'Nutapyta þodþiais. Vilniaus prisiminimai', 'Samuel Bak', '2009', 1),
+(27, 'Times Immemorial / Neatmenami laikai', 'Monika Bielskytë', '2009', 1),
+(28, 'Didieji pasaulio mûðiai', 'Stephane Audoin-Rouzeau', '2006', 1),
+(29, 'Mûsø þaviosios katës', 'Pam Brown', '2008', 1),
+(30, 'Albumas. Ðunys', 'Adrianas Baèkela', '2006', 1),
+(31, 'Lietuvos nacionalinis operos ir baleto teatras', 'Jonas Bruveris', '2006', 1),
+(32, 'Juokis, ir pasaulis juoksis su tavimi', 'David Baird', '2006', 1),
+(33, 'Tas miego saldumas', 'David Baird', '2007', 1),
+(34, 'Pergalë Þalgirio mûðyje', 'Sud. Alfonsas Alijoðius', '2010', 1),
+(35, 'Kelionë. Einu per Lietuvà', 'Bernardas Aleknavièius', '2009', 1),
+(36, 'Nuoga diena', 'R.Danisevièius, V.Kopûstas, R.Parafinavièius', '2008', 1),
+(37, 'Nacionalinio M. K. Èiurlionio dailës muziejaus lobynas. Tapyba', 'Sudarytojas Osvaldas Daugelis', '2009', 1),
+(38, 'Pripaþinkit: mes þavios!', 'Helen Exley', '2004', 1),
+(39, 'Að atsidavæs tau', 'Helen Exley', '2005', 1),
+(40, 'Laiko labirintuose', 'Rièardas Dailidë', '2007', 1),
+(47, 'Gyvatës dovana', 'Lene Kaaberbol', '2003', 1),
+(48, 'Þenkite svajoniø keliu', 'Leslie Levine', '2006', 1),
+(49, 'Perelandra', 'C.S.Lewis', '2008', 1),
+(50, 'Tyroji Þemë', 'Philippa Gregory', '2009', 1),
+(52, 'Alison Weir', 'Nekaltoji iðdavikë', '2009', 1),
+(53, 'Iðtikimoji Karalienë', 'Philippa Gregory', '2009', 1),
+(54, 'Þemiðkieji dþiaugsmai', 'Philippa Gregory', '2009', 1),
+(55, 'Haris Poteris ir ugnies taurë', 'J.K.Rowling', '2002', 1),
+(56, 'Haris Poteris ir Netikras Princas', 'J.K.Rowling', '2006', 1),
+(57, 'Haris Poteris ir paslapèiø kambarys', 'J.K.Rowling', '2001', 1),
+(58, 'Haris Poteris ir Azkabano kalinys', 'J.K.Rowling', '2001', 1),
+(59, 'Haris Poteris ir Fenikso brolija', 'J.K.Rowling', '2004', 1),
+(60, 'Laukinës gulbës', 'Hansas Kristianas Andersenas', '1985', 1),
+(61, 'Paskutinis Mohikanas', 'Dþeimsas Kuperis', '1998', 1),
+(62, 'Grafas Montekristas', 'A.Diuma', '1998', 1),
+(63, 'Legenda apie Tykøjá Donà', 'V.Irvingas', '2000', 1),
+(64, 'Kelionë á þemës centrà', 'Þ.Vernas', '1999', 1),
+(65, 'Juodasisi Graþuolis', 'A.Siuvel', '2000', 1),
+(66, 'Protëviø ðauksmas', 'DÞ.Londonas', '1998', 1),
+(67, 'Aplink Þemæ per 80 dienø', 'Þiulis Vernas', '1998', 1),
+(68, 'Oliveris Tvistas', 'È.Dikensas', '1997', 1),
+(69, 'Maþosios moterys', 'L.Alkot', '1997', 1),
+(70, 'Tomo Sojerio nuotykiai', 'M.Tvenas', '1998', 1),
+(71, 'Lobiø sala', 'R.Styvensonas', '1997', 1),
+(72, '20000 myliø po vandeniu', 'Þ.Vernas', '1998', 1),
+(73, 'KALËDØ GIESMË', 'È.Dikensas', '2005', 1),
+(74, 'Deividas Koperfyldas', 'È.Dikensas', '1998', 1),
+(75, 'Robino Hudo nuotykiai', 'H.Pailas', '1997', 1),
+(76, 'Ðveicarø Robinzonø ðeima', 'J.Vysas', '2000', 1),
+(77, 'Guliverio kelionës ', 'DÞ.Sviftas', '1998', 1),
+(78, 'Frankenðteinas', 'Meri Ðeli', '2002', 1),
+(79, 'Dina Gëdytojos Duktë', 'Lene Kaaberbol', '2003', 1),
+(80, 'Gëdytojos karas', 'Lene Kaaberbol', '2005', 1),
+(81, 'Gëdytojos þenklas', 'Lene Kaaberbol', '2003', 1),
+(82, 'Tanatas', 'Helmut Krausser', '1999', 1),
+(83, 'Elfø durklas', 'Nik Perumov', '2008', 1),
+(84, 'Juodoji ietis', 'Nik Perumov', '2004', 1),
+(85, 'DÞEDAJAUS MOKINYS', 'Dave Wolvertonas', '1999', 1),
+(86, 'Kalahario raðtvedybos mokykla vyrams', 'A.M.Smith', '2006', 1),
+(87, '30 þingsniø á sëkmingà gyvenimà', 'Kurt Tepperwein', '2003', 1),
+(88, 'Mano gyvenimo moteris', 'Carla Guelfenbein', '2006', 1),
+(89, 'Kai esu pas tave', 'Linn Ullmann', '2007', 1),
+(90, 'Eilëje prie skausmo ', 'Adoma', '2008', 1),
+(91, 'Lûpdaþiø dþiunglës ', 'Candace Bushnell', '2007', 1),
+(92, 'Ðokiø salë Magnolijø gatvëje', 'Sharon Owens', '2007', 1),
+(93, 'Kaip pribaigti savo vyrà ir kiti naudingi patarimai', 'Kathy Lette', '2007', 1),
+(94, 'Mylimieji ir þaidëjai', 'Jackie Collins', '2007', 1),
+(95, 'Ledynmetis dinozaurø eros pradþia', 'Susan Korman', '2010', 1),
+(96, 'Debesuota numatoma kukuliø kruða', 'Stacia Deutsch', '2009', 1),
+(97, 'Ðarlotës voratinklis', 'E.B.White', '2006', 1),
+(98, 'Moteris ið pelkynø', 'Dþudi Devero', '1996', 1),
+(99, 'Lietaus simfonija', 'Elena de Strozzi', '2008', 1),
+(100, 'Geriausios draugës ', 'I.Buivydaitë', '2006', 1),
+(101, 'Viskas praeina', 'J. Avyþius', '2003', 1),
+(102, 'Laimingo namo melodramos', 'I.Buivydaitë', '2007', 1),
+(103, 'Du buèiniai geriau', 'Hortense Ulltrich', '2003', 1),
+(104, 'Mylimos tik geltonplaukës ', 'Hortense Ulltrich', '2003', 1),
+(105, 'Laisva', 'Ildiko von Kurthy', '2004', 1),
+(106, 'Á amþinybæ  Buto savininkë', 'Marie Stahl', '1999', 1),
+(107, 'Uþkeikti namai', 'V.Giedra', '1988', 1),
+(108, 'Vertas milijono', 'Susan Mallery', '2007', 1),
+(109, 'Milijonieriaus laimë', 'Susan Mallery', '2008', 1),
+(110, 'MEILË UÞ MILIJONÀ', 'Susan Mallery', '2008', 1),
+(111, 'Þavioji agentë', 'Dana Marton', '2008', 1),
+(112, 'Angelas sargas', 'Dana Marton', '2008', 1),
+(113, 'Slaptas sandëris', 'Dana Marton', '2008', 1),
+(114, 'Kelionës pradþia', 'Nina Harrington', '2010', 1),
+(115, 'Rafaelis turi vesti', 'Melanie Milburne', '2010', 1),
+(116, 'Pikantiðkos smulkmenos', 'Dana Marton', '2009', 1),
+(117, 'Moters laimë', 'Trih Wylie', '2009', 1),
+(118, 'Netrukdyti iki Kalëdø', 'Charlene Sands', '2009', 1),
+(119, 'Nesuvaldoma aistra', 'Penny Jordan', '2010', 1),
+(120, 'Saloje su buvusiuoju', 'Nicola Maarsh', '2011', 1),
+(121, 'Spalvotas sniegas', 'Andrëja', '2009', 1),
+(122, 'Pusryèiai pas Tifaná', 'Trumenas Kapotë', '1994', 1),
+(123, 'Patraukli margaitë', 'Tatjana A.Halek', '1999', 1),
+(124, 'Kristina I dalis', 'Sigrida Unset', '1960', 1),
+(125, 'Kristina II dalis', 'Sigrida Unset', '1962', 1),
+(126, 'Kristina III dalis', 'Sigrida Unset', '1962', 1),
+(127, 'Vargdieniai I dalis', 'Viktoras Hugo', '1959', 1),
+(128, 'Vargdieniai II dalis', 'Viktoras Hugo', '1959', 1),
+(129, 'Vargdieniai III dalis', 'Viktoras Hugo', '1960', 1),
+(130, 'Vargdieniai IV dalis', 'Viktoras Hugo', '1960', 1),
+(131, 'Ana Karenina I dalis', 'Levas Tolstojus', '1958', 1),
+(132, 'Ana Karenina II dalis', 'Levas Tolstojus', '1958', 1),
+(133, 'Goras', 'R.Tagorë', '1960', 1),
+(134, 'Þmogus mirðta vienas', 'Hansas Falada', '1976', 1),
+(135, 'Altoriø ðeðëly', 'V.Mykolaitis - Putinas', '1954', 1),
+(136, 'Paukðèiai besparniai', 'Vilis Lacis', '1959', 1),
+(137, 'Þemës rojus', 'Dþois Kerol Outs', '1976', 1),
+(138, 'Mënulë stabdo pasaulá', 'Georgia Byng', '2005', 1),
+(139, 'Groþio dievaitë', 'Sally Jeffrie', '2010', 1),
+(140, 'Mëtinës padûkëlës ir karaokës karðtinë', 'Patricia Schroder', '2008', 1),
+(141, 'Bebë', 'Karina Mikaelis', '2007', 1),
+(142, 'Kaip susikalbëti su savo ðunimi', 'David Alderton', '2010', 1),
+(143, 'Tai mes, pelës', 'Selemonas Pltanavièius', '2004', 1),
+(144, 'Panelës knyga', 'Kaz Cooke', '2010', 1),
+(145, 'Gilës nuotykiai Ydø ðalyje', 'Vytautas Petkevièius', '1978', 1),
+(146, 'Að iðsiritau ið kiauðinio', 'Renne', '1998', 1);
+
+
+-- --------------------------------------------------------
+
+--
+-- Sukurta duomenø struktûra lentelei `members`
+--
+
+CREATE TABLE IF NOT EXISTS `members` (
+  `member_id` int(11) unsigned NOT NULL auto_increment,
+  `firstname` varchar(100) collate utf8_lithuanian_ci default NULL,
+  `lastname` varchar(100) collate utf8_lithuanian_ci default NULL,
+  `login` varchar(100) collate utf8_lithuanian_ci NOT NULL default '',
+  `passwd` varchar(32) collate utf8_lithuanian_ci NOT NULL default '',
+  PRIMARY KEY  (`member_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci AUTO_INCREMENT=12 ;
+
+--
+-- Sukurta duomenø kopija lentelei `members`
+--
+
+INSERT INTO `members` (`member_id`, `firstname`, `lastname`, `login`, `passwd`) VALUES
+(1, 'Mindaugas', 'Stundys', 'mstundys', 'Ubagas00'),
+(2, 'Kestutis', 'Stundys', 'kestundys', 'Ubagas00'),
+
+
+-- --------------------------------------------------------
+
+--
+-- Sukurta duomenø struktûra lentelei `Uzsakymai`
+--
+
+CREATE TABLE IF NOT EXISTS `Uzsakymai` (
+  `id` int(11) NOT NULL auto_increment,
+  `Knygos_id` int(11) NOT NULL,
+  `member_id` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci AUTO_INCREMENT=95 ;
+
+--
+-- Sukurta duomenø kopija lentelei `Uzsakymai`
+--
+
+INSERT INTO `Uzsakymai` (`id`, `Knygos_id`, `member_id`) VALUES
+(61, 54, 2),
+(62, 134, 2),
+(74, 14, 2),
+(73, 11, 2),
+(66, 127, 2),
+(67, 54, 2),
+(94, 101, 10),
+(93, 134, 10),
+(91, 11, 7);
+
